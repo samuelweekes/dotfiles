@@ -15,10 +15,9 @@
     url = "https://github.com/romkatv/powerlevel10k/archive/v1.20.0.tar.gz"
     exact = true
     stripComponents = 1
-# Replace this with my forker starter that includes and of my config
-# [".config/nvim"]
-#     type = "git-repo"
-#     url = "https://github.com/LazyVim/starter"
-#     branch = "main"
-#     shallow = true
-#     refreshPeriod = "168h"
+[".config/nvim"]
+    type = "git-repo"
+    url = "https://github.com/samuelweekes/lazyvim"
+    branch = "main"
+    shallow = true
+    refreshPeriod = "168h"
