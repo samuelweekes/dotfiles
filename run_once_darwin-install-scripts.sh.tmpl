@@ -1,6 +1,0 @@
-{{ if eq .chezmoi.os "darwin" -}}
-#!/bin/bash
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-git clone https://github.com/LazyVim/starter ~/.config/nvim
-rm -rf ~/.config/nvim/.git
-{{ end -}}
