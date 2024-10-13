@@ -9,4 +9,5 @@ Add timewarrior hook to taskwarrior:
 4. task diagnostics - check active
 
 Install Tmux plugins:
-1. ???
+1. Open up a tmux session
+2. Install plugins with `prefix + I`
