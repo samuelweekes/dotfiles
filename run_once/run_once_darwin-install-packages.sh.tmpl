@@ -1,0 +1,43 @@
+{{ if eq .chezmoi.os "darwin" -}}
+#!/bin/bash
+
+# Helper function to check if a brew formula is installed
+is_brew_installed() {
+  brew list "$1" &>/dev/null
+}
+
+# Helper function to check if a cask is installed via brew
+is_cask_installed_via_brew() {
+  brew list --cask "$1" &>/dev/null
+}
+
+# Helper function to check if a cask app is installed outside of brew
+is_cask_installed_locally() {
+  local app_name="$1"
+  local app_path="/Applications/${app_name}.app"
+  [[ -d "$app_path" ]]
+}
+
+# Loop through the brew packages and install only if not installed
+{{ range .packages.darwin.brews -}}
+if is_brew_installed {{ . | quote }}; then
+  echo "{{ . | quote }} is already installed via brew."
+else
+  echo "Installing {{ . | quote }} via brew..."
+  brew install {{ . | quote }}
+fi
+{{ end -}}
+
+# Loop through the cask packages and install only if not installed
+{{ range .packages.darwin.casks -}}
+if is_cask_installed_via_brew {{ . | quote }}; then
+  echo "Cask {{ . | quote }} is already installed via brew."
+elif is_cask_installed_locally {{ . | quote }}; then
+  echo "Cask {{ . | quote }} is already installed locally (outside of brew)."
+else
+  echo "Installing Cask {{ . | quote }} via brew..."
+  brew install --cask {{ . | quote }}
+fi
+{{ end -}}
+
+{{ end -}}

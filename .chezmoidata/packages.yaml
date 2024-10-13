@@ -27,7 +27,6 @@ packages:
       - 'duf'
       - 'scc'
     casks:
-      - 'google-chrome'
       - 'iterm2'
       - 'slack'
       - 'postman'
