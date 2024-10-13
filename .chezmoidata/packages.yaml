@@ -27,7 +27,7 @@ packages:
       - 'duf'
       - 'scc'
     casks:
-      - 'iterm2'
+      - 'alacritty'
       - 'slack'
       - 'postman'
       - 'tableplus'
