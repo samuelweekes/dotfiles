@@ -26,8 +26,8 @@ packages:
       - 'dua-cli'
       - 'duf'
       - 'scc'
+      - 'bat'
     casks:
       - 'alacritty'
-      - 'slack'
       - 'postman'
       - 'tableplus'
