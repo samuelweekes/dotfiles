@@ -26,6 +26,7 @@ packages:
       - 'dua-cli'
       - 'duf'
       - 'scc'
+      - 'pv'
     casks:
       - 'alacritty'
       - 'slack'
