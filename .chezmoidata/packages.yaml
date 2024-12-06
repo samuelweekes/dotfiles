@@ -27,8 +27,8 @@ packages:
       - 'duf'
       - 'scc'
       - 'pv'
+      - 'bat'
     casks:
       - 'alacritty'
-      - 'slack'
       - 'postman'
       - 'tableplus'
