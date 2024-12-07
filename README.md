@@ -19,11 +19,15 @@ Add Timewarrior hook to Taskwarrior:
 3. chmod +x ~/.task/hooks/on-modify.timewarrior
 4. task diagnostics - check active
 
+Setup bat themes:
+1. Run `bat cache --build` to build the theme cache
+
 Setup PHP Debugger:
 1. Install Xdebug with pecl
 2. Call php --ini to get the loaded config file
 3. Add the below snippet:
-  ```
+
+```
   xdebug.mode = debug
   xdebug.start_with_request = yes
   xdebug.client_host = 127.0.0.1
