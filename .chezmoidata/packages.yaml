@@ -28,6 +28,7 @@ packages:
       - 'scc'
       - 'pv'
       - 'bat'
+      - 'fzf'
     casks:
       - 'alacritty'
       - 'postman'
