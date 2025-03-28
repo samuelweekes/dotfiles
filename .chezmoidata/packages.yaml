@@ -22,7 +22,7 @@ packages:
       - 'jq'
       - 'tldr'
       - 'ffmpeg'
-      - 'bpytop'
+      - 'btop'
       - 'dua-cli'
       - 'duf'
       - 'scc'
